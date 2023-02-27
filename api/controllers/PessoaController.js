@@ -1,4 +1,4 @@
-import db from "../models/index.js";
+const db = require("../models");
 
 class PessoaController {
     static async listar(req, res) {
@@ -12,4 +12,4 @@ class PessoaController {
     }
 }
 
-export default PessoaController;
+module.exports = PessoaController;
