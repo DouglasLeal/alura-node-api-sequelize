@@ -7,3 +7,12 @@ https://sequelize.org/docs/v7/other-topics/migrations/#the-sequelizerc-file
 
 //criar_modelo_via_terminal
 npx sequelize-cli model:create --name <Tabela> --attributes nome:string,ativo:boolean,email:string,role:string
+
+//executar_migration
+npx sequelize-cli db:migrate
+
+//criar_seed
+npx sequelize-cli seed:generate --name <nome>
+
+//executar_seed
+npx sequelize-cli db:seed:all
