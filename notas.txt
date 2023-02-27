@@ -4,3 +4,6 @@ npx sequelize-cli init
 //caso_tire_as_pastas_da_raíz
 Precisa criar o arquivo .sequelizerc
 https://sequelize.org/docs/v7/other-topics/migrations/#the-sequelizerc-file
+
+//criar_modelo_via_terminal
+npx sequelize-cli model:create --name <Tabela> --attributes nome:string,ativo:boolean,email:string,role:string
