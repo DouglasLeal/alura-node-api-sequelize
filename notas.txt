@@ -1,0 +1,6 @@
+//inicializar_configuração_sequelize
+npx sequelize-cli init
+
+//caso_tire_as_pastas_da_raíz
+Precisa criar o arquivo .sequelizerc
+https://sequelize.org/docs/v7/other-topics/migrations/#the-sequelizerc-file
