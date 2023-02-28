@@ -36,16 +36,24 @@ class PessoaController {
         try {
             const {id} = req.params;
 
-            await db.Pessoas.update(req.body);
+            await db.Pessoas.update(req.body, {where: {id}});
 
-            return res.status(204).json(req.body, {where: {id}});
+            return res.status(204).json();
         } catch (error) {
             return res.status(500).json(error.message);
         }
     }
 
     static async excluir(req, res){
+        try {
+            const {id} = req.params;
 
+            await db.Pessoas.destroy({where: {id}});
+
+            return res.status(204).json();
+        } catch (error) {
+            return res.status(500).json(error.message);
+        }
     }
 }
 
