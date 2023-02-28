@@ -23,6 +23,16 @@ class PessoaController {
     }
 
     static async criar(req, res){
+        try {
+            const pessoa = await db.Pessoas.create(req.body);
+
+            return res.status(201).json(pessoa);
+        } catch (error) {
+            return res.status(500).json(error.message);
+        }
+    }
+
+    static async atualizar(req, res){
 
     }
 }
