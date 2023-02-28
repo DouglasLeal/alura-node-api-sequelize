@@ -33,6 +33,18 @@ class PessoaController {
     }
 
     static async atualizar(req, res){
+        try {
+            const {id} = req.params;
+
+            await db.Pessoas.update(req.body);
+
+            return res.status(204).json(req.body, {where: {id}});
+        } catch (error) {
+            return res.status(500).json(error.message);
+        }
+    }
+
+    static async excluir(req, res){
 
     }
 }
