@@ -13,8 +13,12 @@ module.exports = (sequelize, DataTypes) => {
       this.hasMany(models.Matriculas, {
         foreignKey: 'turma_id'
       });
-      this.belongsTo(models.Pessoas);
-      this.belongsTo(models.Niveis)
+      this.belongsTo(models.Pessoas, {
+        foreignKey: 'docente_id'
+      });
+      this.belongsTo(models.Niveis, {
+        foreignKey: 'nivel_id'
+      })
     }
   }
   Turmas.init({
